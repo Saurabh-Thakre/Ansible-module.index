@@ -1,0 +1,13 @@
+---
+- hosts: server
+  tasks:
+    - name: add host to group 'just_created' with variable foo=42
+      add_host:
+        name: 10.74.253.199
+        groups: just_created
+        foo: 42
+
+- hosts: {{ foo }}
+  tasks:
+    - name: check addhost
+      ping:

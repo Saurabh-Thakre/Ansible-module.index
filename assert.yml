@@ -1,0 +1,4 @@
+---
+- hosts: tower
+  tasks:
+    - assert: { that: "ansible_os_family == 'RedHat'" }

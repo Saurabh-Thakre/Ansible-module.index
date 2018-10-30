@@ -1,0 +1,11 @@
+---
+- hosts: server
+  tasks:
+    - name: Grant user Joe read access to a file
+      acl:
+         path: /etc/saurabh.conf
+         entity: saurabh
+         etype: user
+         permissions: rw
+         state: present
+

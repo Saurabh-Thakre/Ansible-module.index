@@ -1,0 +1,8 @@
+---
+- hosts: server
+  tasks:
+    - name: Download file to Remote node location
+      get_url:
+        url: https://releases.ansible.com/keys/442667A9.asc
+        dest: /tmp
+        mode: 0440
