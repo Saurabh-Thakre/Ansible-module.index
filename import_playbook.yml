@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks: 
+    - debug:
+        msg: Import Play 1
+- name: First Playbook 
+  import_playbook: ping.yml
