@@ -1,0 +1,7 @@
+---
+- hosts: server
+  tasks:
+    - name: copy files from remote node to the control node
+      fetch: 
+        src: /etc/saurabh1
+        dest: /etc/saurabh1
