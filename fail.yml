@@ -1,0 +1,6 @@
+---
+- hosts: server
+  tasks:
+    - fail:
+         msg: "I don't know but yes this is a fail msg."
+         when: s != "condition you want to fulfil or vice-versa"

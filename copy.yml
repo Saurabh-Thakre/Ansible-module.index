@@ -1,0 +1,14 @@
+---
+- hosts: server
+  tasks:
+    - name: copying file from scr to dest
+      copy:
+        src: /tmp/saurabh
+        dest: /tmp/saurabh1
+        owner: faa
+        group: laa
+        mode: 0644
+    - name: copy using the content for inline data
+      copy: 
+        content: '#This is the content copying for inline data'
+        dest: /etc/saurabh1

@@ -1,0 +1,11 @@
+---
+- hosts: server
+  tasks:
+    - name: oinstall a packahe
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items: 
+        - tree
+        - emacs
+        - epel-release
